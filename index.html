@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D-Lab | Web Publisher</title>
+
+  <!-- Pretendard (한글) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css" />
+  <!-- Inter (영문) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#hero" class="logo">D-Lab</a>
+      <nav id="gnb">
+        <ul>
+          <li><a href="#hero"    class="gnb-link active">HOME</a></li>
+          <li><a href="#about"   class="gnb-link">ABOUT</a></li>
+          <li><a href="#skills"  class="gnb-link">SKILL</a></li>
+          <li><a href="#works"   class="gnb-link">PROJECT</a></li>
+          <li><a href="#contact" class="gnb-link">CONTACT</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav__close" id="mobileClose" aria-label="메뉴 닫기">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <ul>
+      <li><a href="#hero"    class="mobile-link">HOME</a></li>
+      <li><a href="#about"   class="mobile-link">ABOUT</a></li>
+      <li><a href="#skills"  class="mobile-link">SKILL</a></li>
+      <li><a href="#works"   class="mobile-link">PROJECT</a></li>
+      <li><a href="#contact" class="mobile-link">CONTACT</a></li>
+    </ul>
+  </div>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+      <div class="hero-inner container">
+        <div class="hero-label" id="heroLabel">
+          <span class="hero-label__line"></span>
+          <span class="hero-label__text">UI &amp; UX PUBLISHING</span>
+        </div>
+
+        <h1 class="hero-title" id="heroTitle">
+          <span class="ht-line">Crafted with Code,</span>
+          <span class="ht-line">Designed with Intent.</span>
+        </h1>
+
+        <p class="hero-ko" id="heroKo">코드로 완성하는 디자인</p>
+
+        <div class="hero-bottom" id="heroBottom">
+          <p class="hero-desc">신입 웹 퍼블리셔 김윤호의 포트폴리오 사이트입니다.</p>
+          <a href="#about" class="hero-more">
+            <i class="fa-solid fa-angles-down"></i>
+            <span>VIEW MORE</span>
+          </a>
+        </div>
+
+      </div><!-- /.hero-inner -->
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+      <div class="container">
+        <div class="about-wrap">
+
+          <!-- 좌: 섹션 레이블 -->
+          <div class="about-label" data-aos="fade-right">
+            <span>ABOUT ME</span>
+          </div>
+
+          <!-- 중: 메인 콘텐츠 -->
+          <div class="about-main" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="about-heading">
+              효율과 완성도를 중요시 하는<br />웹퍼블리셔 김윤호입니다.
+            </h3>
+            <p class="about-body">
+              사용자가 무엇을 원하는지 먼저 생각하고,<br />
+              그 답을 디자인과 코드로 풀어냅니다.<br />
+              니즈를 파악하고 불편함을 제거하는 것에서 시작해,<br />
+              화면 하나하나를 직접 설계하고 구현합니다.<br />
+              더 나은 경험을 만드는 것,<br />
+              그것이 제가 퍼블리셔를 선택한 이유입니다.
+            </p>
+            <div class="about-tags">
+              <span>#ENFJ</span>
+              <span>#HARDCODER</span>
+              <span>#READERSHIP</span>
+              <span>#USERCENTRIC</span>
+            </div>
+          </div>
+
+          <!-- 우: 정보 패널 -->
+          <div class="about-panel" data-aos="fade-left" data-aos-delay="200">
+            <div class="panel-block">
+              <span class="panel-label">NAME</span>
+              <p>김윤호 (Kim Yun Ho)</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">EDUCATION</span>
+              <p>서울호서직업전문학교 ICT융합보안 과정 수료</p>
+              <p>이젠아카데미 UI/UX 과정 수료</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">LICENSE</span>
+              <ul class="panel-list">
+                <li><span class="panel-dot"></span>운전면허 2종 보통</li>
+                <li><span class="panel-dot"></span>GTQ 1급</li>
+              </ul>
+            </div>
+            <a href="about.html" class="about-view-more">VIEW MORE &nbsp;→</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="skills-title" data-aos="fade-up">Skill</h2>
+
+        <div class="skills-cards" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-card">
+            <div class="skill-card__icon"><i class="fa-brands fa-figma"></i></div>
+            <h4>FIGMA</h4>
+            <p>와이어프레임부터 시안제작, 직접 설계합니다.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon"><i class="fa-brands fa-html5"></i></div>
+            <h4>HTML5</h4>
+            <p>시맨틱 마크업 중심으로 웹을 퍼블리싱합니다.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <h4>CSS3</h4>
+            <p>반응형 레이아웃과 트랜지션을 구현합니다.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon"><i class="fa-brands fa-js"></i></div>
+            <h4>JAVASCRIPT</h4>
+            <p>인터랙션과 DOM을 직접 조작합니다.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h4>JQUERY</h4>
+            <p>크로스브라우징과 이벤트를 처리합니다.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon"><i class="fa-solid fa-film"></i></div>
+            <h4>GSAP</h4>
+            <p>스크롤 기반의 고급 애니메이션을 구현합니다.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <h4>AOS</h4>
+            <p>스크롤 진입 시 뷰-레이션을 적용합니다.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__icon"><i class="fa-solid fa-robot"></i></div>
+            <h4>CLAUDE</h4>
+            <p>AI를 활용해 빠르게 아이디어를 구현합니다.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== WORKS ===== -->
+    <section id="works">
+      <div class="container">
+        <h2 class="works-title" data-aos="fade-up">PROJECT</h2>
+
+        <div class="project-list">
+
+          <div class="project-item" data-aos="fade-up">
+            <div class="project-item__img">
+              <img src="assets/img/thumb1.png" alt="매일안과 썸네일" class="project-item__thumb" />
+              <a href="https://daily-eye-clinic.netlify.app/" class="project-item__btn" aria-label="프로젝트 보기"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-item__info">
+              <p class="project-num">PROJECT 001 &nbsp;|&nbsp; 개인 프로젝트</p>
+              <h3 class="project-title">매일안과 (개인랜딩)</h3>
+              <p class="project-desc">안과 클리닉의 신뢰감과 전문성을 전달하기 위해 기획한 랜딩페이지입니다.<br> 사용자 흐름을 중심으로 직접 디자인하고 구현했습니다.</p>
+              <ul class="project-meta">
+                <li><span class="meta-key">역할</span><span class="meta-val">디자인 기획 및 구현</span></li>
+                <li><span class="meta-key">기술</span><span class="meta-val">FIGMA, HTML, CSS, JS, AOS</span></li>
+                <li><span class="meta-key">기간</span><span class="meta-val">2025/02/19 ~ 2025/03/07</span></li>
+              </ul>
+              <a href="https://daily-eye-clinic.netlify.app/" class="project-more">프로젝트 보기 &nbsp;→</a>
+            </div>
+          </div>
+
+          <div class="project-item project-item--reverse" data-aos="fade-up">
+            <div class="project-item__img">
+              <img src="assets/img/thumb2.png" alt="넷플릭스 클론 썸네일" class="project-item__thumb" />
+              <a href="https://ott-clone-1.netlify.app/" class="project-item__btn" aria-label="프로젝트 보기"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-item__info">
+              <p class="project-num">PROJECT 002 &nbsp;|&nbsp; 클론코딩</p>
+              <h3 class="project-title">넷플릭스 코딩</h3>
+              <p class="project-desc">넷플릭스 메인 페이지를 클론코딩을 하였습니다. <br>반응형 레이아웃과 jQuery를 활용한 UI 인터랙션 구현에 집중했습니다.</p>
+              <ul class="project-meta">
+                <li><span class="meta-key">역할</span><span class="meta-val">클론코딩</span></li>
+                <li><span class="meta-key">기술</span><span class="meta-val">HTML, CSS, jQuery</span></li>
+                <li><span class="meta-key">기간</span><span class="meta-val">2026/03/10 ~ 2026/03/13</span></li>
+              </ul>
+              <a href="https://ott-clone-1.netlify.app/" class="project-more">프로젝트 보기 &nbsp;→</a>
+            </div>
+          </div>
+
+          <div class="project-item" data-aos="fade-up">
+            <div class="project-item__img">
+              <img src="assets/img/thumb3.png" alt="G.T.I system 썸네일" class="project-item__thumb" />
+              <a href="https://kwh3017-create.github.io" class="project-item__btn" aria-label="프로젝트 보기"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-item__info">
+              <p class="project-num">PROJECT 003 &nbsp;|&nbsp; 개인 프로젝트</p>
+              <h3 class="project-title">G.T.I system<br>(컴퓨터 판매 사이트)</h3>
+              <p class="project-desc">개인 프로젝트로 컴퓨터 판매 웹사이트를 기획부터 디자인, <br>구현까지 주도적으로 진행했습니다.</p>
+              <ul class="project-meta">
+                <li><span class="meta-key">역할</span><span class="meta-val">기획, 디자인, 퍼블리싱 전담</span></li>
+                <li><span class="meta-key">기술</span><span class="meta-val">FIGMA, HTML, CSS, JS, GSAP, AOS</span></li>
+                <li><span class="meta-key">기간</span><span class="meta-val">2026/04/07 ~ 2026/04/17</span></li>
+              </ul>
+              <a href="https://kwh3017-create.github.io" class="project-more">프로젝트 보기 &nbsp;→</a>
+            </div>
+          </div>
+
+          <div class="project-item project-item--reverse" data-aos="fade-up">
+            <div class="project-item__img">
+              <img src="assets/img/thumb4.png" alt="H.A.M 썸네일" class="project-item__thumb" />
+              <a href="https://s00my0un9-xx.github.io/Ham/" class="project-item__btn" aria-label="프로젝트 보기"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-item__info">
+              <p class="project-num">PROJECT 004 &nbsp;|&nbsp; 팀 프로젝트</p>
+              <h3 class="project-title">H.A.M<br>(막걸리 소개 사이트)</h3>
+              <p class="project-desc">팀 프로젝트로 진행한 막걸리 소개 사이트입니다.<br> GSAP 및 AOS 애니메이션 을 활용한 웹사이트입니다.</p>
+              <ul class="project-meta">
+                <li><span class="meta-key">역할</span><span class="meta-val">디자인 컨셉 기획 및 서브페이지 디자인, 코딩</span></li>
+                <li><span class="meta-key">기술</span><span class="meta-val">FIGMA, HTML, CSS, JS, GSAP, AOS</span></li>
+                <li><span class="meta-key">기간</span><span class="meta-val">2026/04/21 ~ 2026/05/08(예정)</span></li>
+              </ul>
+              <a href="https://s00my0un9-xx.github.io/Ham/" class="project-more">프로젝트 보기 &nbsp;→</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info" data-aos="fade-right">
+            <h2 class="contact-title">CONTACT</h2>
+            <p class="contact-sub">협업이나 나누고 싶은 대화가 있다면 <br>언제든 연락해 주십시오!</p>
+            <div class="contact-details">
+              <div class="contact-detail">
+                <span class="detail-label">이메일</span>
+                <a href="mailto:s14fas@naver.com" class="detail-val detail-accent">s14fas@naver.com</a>
+              </div>
+              <div class="contact-detail">
+                <span class="detail-label">연락처</span>
+                <span class="detail-val">010-4941-3714</span>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm" data-aos="fade-left" data-aos-delay="150">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="이름" required />
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder="이메일" required />
+            </div>
+            <div class="form-group">
+              <textarea id="message" rows="5" placeholder="메세지를 입력해주세요" required></textarea>
+            </div>
+            <button type="submit" class="btn-send">메시지 보내기</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-logo">D-Lab</p>
+        <p class="footer-copy">&copy; 이것은 상업용 목적이 아닌 개인 포트폴리오 사이트입니다.</p>
+        <nav class="footer-links">
+          <a href="https://www.instagram.com/express_hold/">INSTAGRAM</a>
+          <a href="https://open.kakao.com/o/sbmcWnFb">KAKAOTALK</a>
+          <a href="https://github.com/kwh3017-create">GITHUB</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Top Button -->
+  <button class="top-btn" id="topBtn" aria-label="맨 위로">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
