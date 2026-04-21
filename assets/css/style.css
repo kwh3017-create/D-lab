@@ -906,7 +906,30 @@ section {
   .about-label { display: none; }
 
   .skills-cards { grid-template-columns: repeat(2, 1fr); }
-  .project-item { gap: 48px; }
+
+  /* Project: 태블릿도 1열로 */
+  .project-swiper { padding-bottom: 40px !important; }
+  .project-item,
+  .project-item--reverse {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0;
+  }
+  .project-item__img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+  .project-item__thumb {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .project-item--reverse .project-item__img { order: 0; }
+  .project-item--reverse .project-item__info { order: 0; }
 
   .contact-grid { grid-template-columns: 1fr; gap: 56px; }
   .contact-title { font-size: 38px; }
@@ -954,31 +977,13 @@ section {
 
   .skills-cards { grid-template-columns: repeat(2, 1fr); }
 
-  /* Project: Swiper 유지 및 레이아웃 조정 */
-  .project-swiper { padding-bottom: 40px !important; }
-  .project-item,
-  .project-item--reverse {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 0;
-  }
-  .project-item__img {
-    aspect-ratio: 16/10; /* 모바일에서 더 적절한 비율로 변경 */
-    width: 100%;
-  }
-  .project-item__thumb {
-    object-fit: cover; /* 공간을 꽉 채우되 */
-    object-position: top; /* 웹사이트의 상단(헤더)부터 보여줌 */
-  }
-  .project-item--reverse .project-item__img { order: 0; }
-  .project-item--reverse .project-item__info { order: 0; }
   .project-item__info { gap: 16px; text-align: center; align-items: center; }
   .project-title { font-size: 26px; }
   .project-meta li { font-size: 15px; justify-content: center; }
   .project-more { font-size: 15px; align-self: center; }
-  
+
   .project-swiper .swiper-button-next,
-  .project-swiper .swiper-button-prev { display: none; } /* 모바일은 버튼 숨김 (스와이프 중심) */
+  .project-swiper .swiper-button-prev { display: none; }
 
   /* Contact */
   .contact-title { font-size: 32px; }
