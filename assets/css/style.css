@@ -962,6 +962,14 @@ section {
     gap: 24px;
     padding: 0;
   }
+  .project-item__img {
+    aspect-ratio: 16/10; /* 모바일에서 더 적절한 비율로 변경 */
+    width: 100%;
+  }
+  .project-item__thumb {
+    object-fit: cover; /* 공간을 꽉 채우되 */
+    object-position: top; /* 웹사이트의 상단(헤더)부터 보여줌 */
+  }
   .project-item--reverse .project-item__img { order: 0; }
   .project-item--reverse .project-item__info { order: 0; }
   .project-item__info { gap: 16px; text-align: center; align-items: center; }
