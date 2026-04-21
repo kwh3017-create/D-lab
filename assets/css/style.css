@@ -27,7 +27,7 @@
   --shadow:      0 8px 40px rgba(0,0,0,.6);
 }
 
-html { scroll-behavior: auto; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
   font-family: 'Inter', 'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
@@ -51,11 +51,12 @@ button { cursor: pointer; border: none; background: none; }
 
 /* ── Section Common ────────────────────────── */
 section {
-  padding: 120px 0;
-  min-height: 100vh;
+  padding: 80px 0;
+  min-height: 100vh; /* 모든 섹션 화면 꽉 채움 */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; /* 수직 중앙 정렬 */
+  position: relative;
 }
 
 .section-header {
@@ -312,7 +313,7 @@ section {
   font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
   font-size: 50px;
   font-weight: 800;
-  color: #444655;
+  color: var(--accent-dk);
   margin-bottom: 20px;
 }
 
@@ -567,7 +568,7 @@ section {
 /* =============================================
    WORKS / PROJECT
    ============================================= */
-#works { background: var(--bg); }
+#works { background: var(--bg); overflow: hidden; }
 
 .works-title {
   font-size: clamp(38px, 5vw, 64px);
@@ -577,13 +578,19 @@ section {
   margin-bottom: 48px;
 }
 
-/* ── 가로 캐러셀 ── */
-#works .container { overflow: hidden; position: relative; }
+/* ── Swiper Custom ── */
+.project-swiper {
+  width: 100%;
+  padding-bottom: 60px !important; /* pagination 공간 */
+  overflow: hidden !important;
+}
 
-.project-list {
-  display: flex;
-  flex-direction: row;
-  will-change: transform;
+.swiper-slide {
+  height: auto;
+  opacity: 1; /* 투명도 효과 제거 */
+}
+.swiper-slide-active {
+  opacity: 1;
 }
 
 .project-item {
@@ -591,40 +598,63 @@ section {
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
-  min-width: 100%;
-  flex-shrink: 0;
+  width: 100%;
 }
 
-/* reverse 클래스 가로 모드에서 무효화 */
+/* reverse 클래스 - Swiper 내에서도 유지 가능 */
 .project-item--reverse { grid-template-columns: 1.2fr 1fr; }
-.project-item--reverse .project-item__img { order: unset; }
-.project-item--reverse .project-item__info { order: unset; }
+.project-item--reverse .project-item__img { order: 2; }
+.project-item--reverse .project-item__info { order: 1; }
 
-/* 프로젝트 진행 도트 */
-.project-dots {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  margin-top: 32px;
-}
-.project-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
+/* Swiper Pagination */
+.project-swiper .swiper-pagination-bullet {
   background: var(--border);
-  transition: background .3s, transform .3s;
-  cursor: pointer;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s;
 }
-.project-dot.active {
+.project-swiper .swiper-pagination-bullet-active {
   background: var(--accent);
   transform: scale(1.4);
 }
 
+/* Swiper Navigation */
+.project-swiper .swiper-button-next,
+.project-swiper .swiper-button-prev {
+  color: var(--accent);
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.project-swiper .swiper-button-next::after,
+.project-swiper .swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+.project-swiper .swiper-button-next:hover,
+.project-swiper .swiper-button-prev:hover {
+  background: var(--accent);
+  color: #fff;
+}
+.project-swiper .swiper-button-prev { left: -70px; }
+.project-swiper .swiper-button-next { right: -70px; }
+
+/* 컨테이너 밖으로 화살표가 나갈 경우 대비 */
+@media (max-width: 1400px) {
+  .project-swiper .swiper-button-prev { left: 10px; }
+  .project-swiper .swiper-button-next { right: 10px; }
+}
+
 .project-item__img {
   position: relative;
-  aspect-ratio: 4/3;
+  width: 100%;
+  height: 320px;
   overflow: hidden;
   border-radius: var(--radius);
+  background: var(--surface);
 }
 .project-item__thumb {
   position: absolute;
@@ -632,17 +662,10 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   transition: transform var(--trans);
 }
-.project-item:hover .project-item__thumb { transform: scale(1.04); }
-
-.project-item__img::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1;
-}
+.project-item__img:hover .project-item__thumb { transform: scale(1.04); }
 
 .project-item__placeholder {
   width: 100%;
@@ -655,7 +678,7 @@ section {
   color: var(--border);
   transition: transform var(--trans), color var(--trans);
 }
-.project-item:hover .project-item__placeholder {
+.project-item__img:hover .project-item__placeholder {
   transform: scale(1.04);
   color: var(--accent);
 }
@@ -675,7 +698,7 @@ section {
   transform: translateY(8px);
   transition: opacity var(--trans), transform var(--trans);
 }
-.project-item:hover .project-item__btn {
+.project-item__img:hover .project-item__btn {
   opacity: 1;
   transform: translateY(0);
 }
@@ -738,17 +761,15 @@ section {
 /* =============================================
    CONTACT
    ============================================= */
-#contact { background: var(--bg); }
+#contact { background: var(--bg); text-align: center; }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 100px;
-  align-items: start;
+.contact-wrap {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .contact-title {
-  font-size: 50px;
+  font-size: clamp(38px, 5vw, 64px);
   font-weight: 800;
   color: var(--text);
   letter-spacing: -.02em;
@@ -757,63 +778,64 @@ section {
 }
 .contact-sub {
   font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
-  font-size: 24px;
+  font-size: clamp(18px, 2.5vw, 24px);
   color: var(--text-mute);
-  line-height: 1.9;
-  margin-bottom: 48px;
+  line-height: 1.6;
+  margin-bottom: 64px;
 }
-.contact-details { display: flex; flex-direction: column; gap: 24px; }
-.contact-detail { display: flex; flex-direction: column; gap: 6px; }
+.contact-details { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 40px; 
+  align-items: center;
+}
+.contact-detail { display: flex; flex-direction: column; gap: 12px; }
 .detail-label {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
-  letter-spacing: .14em;
+  letter-spacing: .2em;
   text-transform: uppercase;
   color: var(--accent-dk);
 }
-.detail-val { font-size: 24px; color: var(--text); }
-.detail-accent { color: var(--accent); transition: opacity var(--trans); }
-.detail-accent:hover { opacity: .75; }
-
-/* Form – underline style */
-.contact-form { display: flex; flex-direction: column; gap: 0; }
-.form-group { position: relative; }
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--border);
-  border-radius: 0;
-  padding: 18px 0;
-  color: var(--text);
-  font-family: inherit;
-  font-size: 15px;
-  outline: none;
-  resize: none;
-  transition: border-color var(--trans);
+.detail-val { 
+  font-size: clamp(20px, 3vw, 32px); 
+  color: var(--text); 
+  font-weight: 500;
 }
-.form-group input:focus,
-.form-group textarea:focus { border-bottom-color: var(--accent); }
-.form-group input::placeholder,
-.form-group textarea::placeholder { color: var(--text-mute); }
-.form-group textarea { min-height: 120px; }
-
-.btn-send {
-  margin-top: 36px;
-  width: 100%;
-  padding: 18px;
-  background: var(--accent);
-  color: #fff;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: .22em;
-  border: none;
-  border-radius: 0;
-  cursor: pointer;
-  transition: background var(--trans);
+.detail-accent { 
+  color: var(--accent); 
+  transition: color var(--trans), opacity var(--trans); 
 }
-.btn-send:hover { background: var(--accent-dk); }
+.detail-accent:hover { 
+  opacity: 0.7;
+}
+
+.detail-sns {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+}
+.detail-sns a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 40px; /* FontAwesome 아이콘 크기 */
+  line-height: 1;
+}
+.detail-sns a svg {
+  width: 44px; /* SVG 아이콘 크기 */
+  height: 44px;
+  display: block;
+}
+.detail-divider {
+  color: var(--border);
+  font-size: 24px;
+}
+
+/* Form 스타일 제거됨 */
 
 
 /* =============================================
@@ -932,23 +954,23 @@ section {
 
   .skills-cards { grid-template-columns: repeat(2, 1fr); }
 
-  /* Project: 세로 스택 전환 */
-  .project-list {
-    flex-direction: column;
-  }
+  /* Project: Swiper 유지 및 레이아웃 조정 */
+  .project-swiper { padding-bottom: 40px !important; }
   .project-item,
   .project-item--reverse {
     grid-template-columns: 1fr;
-    gap: 32px;
-    padding: 48px 0;
-    min-width: unset;
+    gap: 24px;
+    padding: 0;
   }
   .project-item--reverse .project-item__img { order: 0; }
   .project-item--reverse .project-item__info { order: 0; }
-  .project-item__info { gap: 16px; }
+  .project-item__info { gap: 16px; text-align: center; align-items: center; }
   .project-title { font-size: 26px; }
-  .project-meta li { font-size: 15px; }
-  .project-more { font-size: 15px; }
+  .project-meta li { font-size: 15px; justify-content: center; }
+  .project-more { font-size: 15px; align-self: center; }
+  
+  .project-swiper .swiper-button-next,
+  .project-swiper .swiper-button-prev { display: none; } /* 모바일은 버튼 숨김 (스와이프 중심) */
 
   /* Contact */
   .contact-title { font-size: 32px; }

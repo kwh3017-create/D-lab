@@ -46,6 +46,8 @@
 
   <!-- AOS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <!-- Custom CSS -->
@@ -92,19 +94,19 @@
     <!-- ===== HERO ===== -->
     <section id="hero">
       <div class="hero-inner container">
-        <div class="hero-label" id="heroLabel">
+        <div class="hero-label" id="heroLabel" data-aos="fade-right" data-aos-duration="1000">
           <span class="hero-label__line"></span>
           <span class="hero-label__text">UI &amp; UX PUBLISHING</span>
         </div>
 
-        <h1 class="hero-title" id="heroTitle">
+        <h1 class="hero-title" id="heroTitle" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
           <span class="ht-line">Crafted with Code,</span>
           <span class="ht-line">Designed with Intent.</span>
         </h1>
 
-        <p class="hero-ko" id="heroKo">코드로 완성하는 디자인</p>
+        <p class="hero-ko" id="heroKo" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">코드로 완성하는 디자인</p>
 
-        <div class="hero-bottom" id="heroBottom">
+        <div class="hero-bottom" id="heroBottom" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
           <p class="hero-desc">신입 웹 퍼블리셔 김윤호의 포트폴리오 사이트입니다.</p>
           <a href="#about" class="hero-more">
             <i class="fa-solid fa-angles-down"></i>
@@ -121,16 +123,16 @@
         <div class="about-wrap">
 
           <!-- 좌: 섹션 레이블 -->
-          <div class="about-label" data-aos="fade-right">
+          <div class="about-label" data-aos="fade-right" data-aos-duration="1000">
             <span>ABOUT ME</span>
           </div>
 
           <!-- 중: 메인 콘텐츠 -->
-          <div class="about-main" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="about-heading">
+          <div class="about-main">
+            <h3 class="about-heading" data-aos="fade-up" data-aos-delay="100">
               효율과 완성도를 중요시 하는<br />웹퍼블리셔 김윤호입니다.
             </h3>
-            <p class="about-body">
+            <p class="about-body" data-aos="fade-up" data-aos-delay="200">
               사용자가 무엇을 원하는지 먼저 생각하고,<br />
               그 답을 디자인과 코드로 풀어냅니다.<br />
               니즈를 파악하고 불편함을 제거하는 것에서 시작해,<br />
@@ -138,7 +140,7 @@
               더 나은 경험을 만드는 것,<br />
               그것이 제가 퍼블리셔를 선택한 이유입니다.
             </p>
-            <div class="about-tags">
+            <div class="about-tags" data-aos="fade-up" data-aos-delay="300">
               <span>#ENFJ</span>
               <span>#HARDCODER</span>
               <span>#READERSHIP</span>
@@ -147,7 +149,7 @@
           </div>
 
           <!-- 우: 정보 패널 -->
-          <div class="about-panel" data-aos="fade-left" data-aos-delay="200">
+          <div class="about-panel" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">
             <div class="panel-block">
               <span class="panel-label">NAME</span>
               <p>김윤호 (Kim Yun Ho)</p>
@@ -164,7 +166,7 @@
                 <li><span class="panel-dot"></span>GTQ 1급</li>
               </ul>
             </div>
-            <a href="https://www.notion.so/_-303e07f3d4ca817dbf38ea2908747b39?source=copy_link" class="about-view-more">VIEW MORE &nbsp;→</a>
+            <a href="https://spotty-helmet-f45.notion.site/_-303e07f3d4ca817dbf38ea2908747b39?source=copy_link" class="about-view-more" target="_blank" rel="noopener noreferrer">VIEW MORE &nbsp;→</a>
           </div>
 
         </div>
@@ -176,46 +178,66 @@
       <div class="container">
         <h2 class="skills-title" data-aos="fade-up">Skill</h2>
 
-        <div class="skills-cards" data-aos="fade-up" data-aos-delay="100">
-          <div class="skill-card">
+        <div class="skills-cards">
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
             <div class="skill-card__icon"><i class="fa-brands fa-figma"></i></div>
             <h4>FIGMA</h4>
             <p>와이어프레임부터 시안제작, 직접 설계합니다.</p>
           </div>
-          <div class="skill-card">
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
             <div class="skill-card__icon"><i class="fa-brands fa-html5"></i></div>
             <h4>HTML5</h4>
             <p>시맨틱 마크업 중심으로 웹을 퍼블리싱합니다.</p>
           </div>
-          <div class="skill-card">
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
             <div class="skill-card__icon"><i class="fa-brands fa-css3-alt"></i></div>
             <h4>CSS3</h4>
             <p>반응형 레이아웃과 트랜지션을 구현합니다.</p>
           </div>
-          <div class="skill-card">
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
             <div class="skill-card__icon"><i class="fa-brands fa-js"></i></div>
             <h4>JAVASCRIPT</h4>
             <p>인터랙션과 DOM을 직접 조작합니다.</p>
           </div>
-          <div class="skill-card">
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
             <div class="skill-card__icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
             <h4>JQUERY</h4>
             <p>크로스브라우징과 이벤트를 처리합니다.</p>
           </div>
-          <div class="skill-card">
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
             <div class="skill-card__icon"><i class="fa-solid fa-film"></i></div>
             <h4>GSAP</h4>
             <p>스크롤 기반의 고급 애니메이션을 구현합니다.</p>
           </div>
-          <div class="skill-card">
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
             <div class="skill-card__icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
             <h4>AOS</h4>
             <p>스크롤 진입 시 뷰-레이션을 적용합니다.</p>
           </div>
-          <div class="skill-card">
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
             <div class="skill-card__icon"><i class="fa-solid fa-robot"></i></div>
             <h4>CLAUDE</h4>
             <p>AI를 활용해 빠르게 아이디어를 구현합니다.</p>
+          </div>
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-card__icon"><i class="fa-brands fa-github"></i></div>
+            <h4>GITHUB</h4>
+            <p>협업 및 버전 관리를 위해 Git을 활용합니다.</p>
+          </div>
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-card__icon"><i class="fa-solid fa-palette"></i></div>
+            <h4>PHOTOSHOP</h4>
+            <p>디자인 리소스 편집 및 이미지 보정이 가능합니다.</p>
+          </div>
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-card__icon"><i class="fa-brands fa-sass"></i></div>
+            <h4>SCSS</h4>
+            <p>유지보수가 용이한 구조적 CSS를 작성합니다.</p>
+          </div>
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-card__icon"><i class="fa-solid fa-clipboard-list"></i></div>
+            <h4>NOTION</h4>
+            <p>프로젝트 일정 관리 및 문서화에 능숙합니다.</p>
           </div>
         </div>
 
@@ -225,82 +247,101 @@
     <!-- ===== WORKS ===== -->
     <section id="works">
       <div class="container">
-        <h2 class="works-title" data-aos="fade-up">PROJECT</h2>
+        <h2 class="works-title" data-aos="fade-up" data-aos-duration="1000">PROJECT</h2>
 
-        <div class="project-list">
+        <!-- Swiper Container -->
+        <div class="swiper project-swiper" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+          <div class="swiper-wrapper">
 
-          <div class="project-item" data-aos="fade-up">
-            <div class="project-item__img">
-              <img src="assets/img/thumb1.png" alt="매일안과 썸네일" class="project-item__thumb" />
-              <a href="https://daily-eye-clinic.netlify.app/" class="project-item__btn" aria-label="프로젝트 보기"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="project-item">
+                <div class="project-item__img">
+                  <img src="assets/img/thumb1.png" alt="매일안과 썸네일" class="project-item__thumb" />
+                  <a href="https://daily-eye-clinic.netlify.app/" class="project-item__btn" aria-label="프로젝트 보기" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project-item__info">
+                  <p class="project-num">PROJECT 001 &nbsp;|&nbsp; 개인 프로젝트</p>
+                  <h3 class="project-title">매일안과 (개인랜딩)</h3>
+                  <p class="project-desc">안과 클리닉의 신뢰감과 전문성을 전달하기 위해 기획한 랜딩페이지입니다.<br> 사용자 흐름을 중심으로 직접 디자인하고 구현했습니다.</p>
+                  <ul class="project-meta">
+                    <li><span class="meta-key">역할</span><span class="meta-val">디자인 기획 및 구현</span></li>
+                    <li><span class="meta-key">기술</span><span class="meta-val">FIGMA, HTML, CSS, JS, AOS</span></li>
+                    <li><span class="meta-key">기간</span><span class="meta-val">2025/02/19 ~ 2025/03/07</span></li>
+                  </ul>
+                  <a href="https://daily-eye-clinic.netlify.app/" class="project-more" target="_blank" rel="noopener noreferrer">프로젝트 보기 &nbsp;→</a>
+                </div>
+              </div>
             </div>
-            <div class="project-item__info">
-              <p class="project-num">PROJECT 001 &nbsp;|&nbsp; 개인 프로젝트</p>
-              <h3 class="project-title">매일안과 (개인랜딩)</h3>
-              <p class="project-desc">안과 클리닉의 신뢰감과 전문성을 전달하기 위해 기획한 랜딩페이지입니다.<br> 사용자 흐름을 중심으로 직접 디자인하고 구현했습니다.</p>
-              <ul class="project-meta">
-                <li><span class="meta-key">역할</span><span class="meta-val">디자인 기획 및 구현</span></li>
-                <li><span class="meta-key">기술</span><span class="meta-val">FIGMA, HTML, CSS, JS, AOS</span></li>
-                <li><span class="meta-key">기간</span><span class="meta-val">2025/02/19 ~ 2025/03/07</span></li>
-              </ul>
-              <a href="https://daily-eye-clinic.netlify.app/" class="project-more">프로젝트 보기 &nbsp;→</a>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="project-item">
+                <div class="project-item__img">
+                  <img src="assets/img/thumb2.png" alt="넷플릭스 클론 썸네일" class="project-item__thumb" />
+                  <a href="https://ott-clone-1.netlify.app/" class="project-item__btn" aria-label="프로젝트 보기" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project-item__info">
+                  <p class="project-num">PROJECT 002 &nbsp;|&nbsp; 클론코딩</p>
+                  <h3 class="project-title">넷플릭스 코딩</h3>
+                  <p class="project-desc">넷플릭스 메인 페이지를 클론코딩을 하였습니다. <br>반응형 레이아웃과 jQuery를 활용한 UI 인터랙션 구현에 집중했습니다.</p>
+                  <ul class="project-meta">
+                    <li><span class="meta-key">역할</span><span class="meta-val">클론코딩</span></li>
+                    <li><span class="meta-key">기술</span><span class="meta-val">HTML, CSS, jQuery</span></li>
+                    <li><span class="meta-key">기간</span><span class="meta-val">2026/03/10 ~ 2026/03/13</span></li>
+                  </ul>
+                  <a href="https://ott-clone-1.netlify.app/" class="project-more" target="_blank" rel="noopener noreferrer">프로젝트 보기 &nbsp;→</a>
+                </div>
+              </div>
             </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="project-item">
+                <div class="project-item__img">
+                  <img src="assets/img/thumb3.png" alt="G.T.I system 썸네일" class="project-item__thumb" />
+                  <a href="https://kwh3017-create.github.io" class="project-item__btn" aria-label="프로젝트 보기" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project-item__info">
+                  <p class="project-num">PROJECT 003 &nbsp;|&nbsp; 개인 프로젝트</p>
+                  <h3 class="project-title">G.T.I system<br>(컴퓨터 판매 사이트)</h3>
+                  <p class="project-desc">개인 프로젝트로 컴퓨터 판매 웹사이트를 기획부터 디자인, <br>구현까지 주도적으로 진행했습니다.</p>
+                  <ul class="project-meta">
+                    <li><span class="meta-key">역할</span><span class="meta-val">기획, 디자인, 퍼블리싱 전담</span></li>
+                    <li><span class="meta-key">기술</span><span class="meta-val">FIGMA, HTML, CSS, JS, GSAP, AOS</span></li>
+                    <li><span class="meta-key">기간</span><span class="meta-val">2026/04/07 ~ 2026/04/17</span></li>
+                  </ul>
+                  <a href="https://kwh3017-create.github.io" class="project-more" target="_blank" rel="noopener noreferrer">프로젝트 보기 &nbsp;→</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="project-item">
+                <div class="project-item__img">
+                  <img src="assets/img/thumb4.png" alt="H.A.M 썸네일" class="project-item__thumb" />
+                  <a href="https://s00my0un9-xx.github.io/Ham/" class="project-item__btn" aria-label="프로젝트 보기" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project-item__info">
+                  <p class="project-num">PROJECT 004 &nbsp;|&nbsp; 팀 프로젝트</p>
+                  <h3 class="project-title">H.A.M<br>(막걸리 소개 사이트)</h3>
+                  <p class="project-desc">팀 프로젝트로 진행한 막걸리 소개 사이트입니다.<br> GSAP 및 AOS 애니메이션 을 활용한 웹사이트입니다.</p>
+                  <ul class="project-meta">
+                    <li><span class="meta-key">역할</span><span class="meta-val">디자인 컨셉 기획 및 서브페이지 디자인, 코딩</span></li>
+                    <li><span class="meta-key">기술</span><span class="meta-val">FIGMA, HTML, CSS, JS, GSAP, AOS</span></li>
+                    <li><span class="meta-key">기간</span><span class="meta-val">2026/04/21 ~ 2026/05/08(예정)</span></li>
+                  </ul>
+                  <a href="https://s00my0un9-xx.github.io/Ham/" class="project-more" target="_blank" rel="noopener noreferrer">프로젝트 보기 &nbsp;→</a>
+                </div>
+              </div>
+            </div>
+
           </div>
-
-          <div class="project-item project-item--reverse" data-aos="fade-up">
-            <div class="project-item__img">
-              <img src="assets/img/thumb2.png" alt="넷플릭스 클론 썸네일" class="project-item__thumb" />
-              <a href="https://ott-clone-1.netlify.app/" class="project-item__btn" aria-label="프로젝트 보기"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <div class="project-item__info">
-              <p class="project-num">PROJECT 002 &nbsp;|&nbsp; 클론코딩</p>
-              <h3 class="project-title">넷플릭스 코딩</h3>
-              <p class="project-desc">넷플릭스 메인 페이지를 클론코딩을 하였습니다. <br>반응형 레이아웃과 jQuery를 활용한 UI 인터랙션 구현에 집중했습니다.</p>
-              <ul class="project-meta">
-                <li><span class="meta-key">역할</span><span class="meta-val">클론코딩</span></li>
-                <li><span class="meta-key">기술</span><span class="meta-val">HTML, CSS, jQuery</span></li>
-                <li><span class="meta-key">기간</span><span class="meta-val">2026/03/10 ~ 2026/03/13</span></li>
-              </ul>
-              <a href="https://ott-clone-1.netlify.app/" class="project-more">프로젝트 보기 &nbsp;→</a>
-            </div>
-          </div>
-
-          <div class="project-item" data-aos="fade-up">
-            <div class="project-item__img">
-              <img src="assets/img/thumb3.png" alt="G.T.I system 썸네일" class="project-item__thumb" />
-              <a href="https://kwh3017-create.github.io" class="project-item__btn" aria-label="프로젝트 보기"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <div class="project-item__info">
-              <p class="project-num">PROJECT 003 &nbsp;|&nbsp; 개인 프로젝트</p>
-              <h3 class="project-title">G.T.I system<br>(컴퓨터 판매 사이트)</h3>
-              <p class="project-desc">개인 프로젝트로 컴퓨터 판매 웹사이트를 기획부터 디자인, <br>구현까지 주도적으로 진행했습니다.</p>
-              <ul class="project-meta">
-                <li><span class="meta-key">역할</span><span class="meta-val">기획, 디자인, 퍼블리싱 전담</span></li>
-                <li><span class="meta-key">기술</span><span class="meta-val">FIGMA, HTML, CSS, JS, GSAP, AOS</span></li>
-                <li><span class="meta-key">기간</span><span class="meta-val">2026/04/07 ~ 2026/04/17</span></li>
-              </ul>
-              <a href="https://kwh3017-create.github.io" class="project-more">프로젝트 보기 &nbsp;→</a>
-            </div>
-          </div>
-
-          <div class="project-item project-item--reverse" data-aos="fade-up">
-            <div class="project-item__img">
-              <img src="assets/img/thumb4.png" alt="H.A.M 썸네일" class="project-item__thumb" />
-              <a href="https://s00my0un9-xx.github.io/Ham/" class="project-item__btn" aria-label="프로젝트 보기"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <div class="project-item__info">
-              <p class="project-num">PROJECT 004 &nbsp;|&nbsp; 팀 프로젝트</p>
-              <h3 class="project-title">H.A.M<br>(막걸리 소개 사이트)</h3>
-              <p class="project-desc">팀 프로젝트로 진행한 막걸리 소개 사이트입니다.<br> GSAP 및 AOS 애니메이션 을 활용한 웹사이트입니다.</p>
-              <ul class="project-meta">
-                <li><span class="meta-key">역할</span><span class="meta-val">디자인 컨셉 기획 및 서브페이지 디자인, 코딩</span></li>
-                <li><span class="meta-key">기술</span><span class="meta-val">FIGMA, HTML, CSS, JS, GSAP, AOS</span></li>
-                <li><span class="meta-key">기간</span><span class="meta-val">2026/04/21 ~ 2026/05/08(예정)</span></li>
-              </ul>
-              <a href="https://s00my0un9-xx.github.io/Ham/" class="project-more">프로젝트 보기 &nbsp;→</a>
-            </div>
-          </div>
-
+          <!-- Swiper Controls -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
     </section>
@@ -308,33 +349,32 @@
     <!-- ===== CONTACT ===== -->
     <section id="contact">
       <div class="container">
-        <div class="contact-grid">
-          <div class="contact-info" data-aos="fade-right">
-            <h2 class="contact-title">CONTACT</h2>
-            <p class="contact-sub">협업이나 나누고 싶은 대화가 있다면 <br>언제든 연락해 주십시오!</p>
-            <div class="contact-details">
-              <div class="contact-detail">
-                <span class="detail-label">이메일</span>
-                <a href="mailto:s14fas@naver.com" class="detail-val detail-accent">s14fas@naver.com</a>
-              </div>
-              <div class="contact-detail">
-                <span class="detail-label">연락처</span>
-                <span class="detail-val">010-4941-3714</span>
+        <div class="contact-wrap" data-aos="fade-up" data-aos-duration="1000">
+          <h2 class="contact-title">CONTACT</h2>
+          <p class="contact-sub">협업이나 나누고 싶은 대화가 있다면 <br>언제든 연락해 주십시오!</p>
+          
+          <div class="contact-details">
+            <div class="contact-detail" data-aos="fade-up" data-aos-delay="200">
+              <span class="detail-label">이메일</span>
+              <a href="mailto:s14fas@naver.com" class="detail-val detail-accent">s14fas@naver.com</a>
+            </div>
+            <div class="contact-detail" data-aos="fade-up" data-aos-delay="300">
+              <span class="detail-label">연락처</span>
+              <span class="detail-val">010-4941-3714</span>
+            </div>
+            <div class="contact-detail" data-aos="fade-up" data-aos-delay="400">
+              <span class="detail-label">SNS</span>
+              <div class="detail-sns">
+                <a href="https://www.instagram.com/express_hold/" target="_blank" rel="noopener noreferrer" class="detail-val detail-accent" aria-label="인스타그램"><i class="fa-brands fa-instagram"></i></a>
+                <span class="detail-divider">/</span>
+                <a href="https://open.kakao.com/o/sbmcWnFb" target="_blank" rel="noopener noreferrer" class="detail-val detail-accent" aria-label="카카오톡">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.001 3C17.801 3 22.502 6.664 22.502 11.185C22.502 15.705 17.801 19.369 12.002 19.369C11.4246 19.368 10.8478 19.3312 10.275 19.259L5.86695 22.142C5.36595 22.407 5.18895 22.378 5.39495 21.729L6.28695 18.051C3.40695 16.591 1.50195 14.061 1.50195 11.185C1.50195 6.665 6.20195 3 12.002 3M17.91 11.06L19.38 9.636C19.4648 9.54791 19.5121 9.43033 19.5119 9.30804C19.5118 9.18575 19.4642 9.06829 19.3792 8.98041C19.2941 8.89252 19.1783 8.84107 19.0561 8.83689C18.9339 8.83271 18.8148 8.87613 18.724 8.958L16.796 10.824V9.282C16.796 9.15682 16.7462 9.03676 16.6577 8.94825C16.5692 8.85973 16.4491 8.81 16.324 8.81C16.1988 8.81 16.0787 8.85973 15.9902 8.94825C15.9017 9.03676 15.852 9.15682 15.852 9.282V11.839C15.8353 11.9121 15.8353 11.9879 15.852 12.061V13.5C15.852 13.6252 15.9017 13.7452 15.9902 13.8338C16.0787 13.9223 16.1988 13.972 16.324 13.972C16.4491 13.972 16.5692 13.9223 16.6577 13.8338C16.7462 13.7452 16.796 13.6252 16.796 13.5V12.137L17.223 11.724L18.651 13.757C18.6866 13.8078 18.7319 13.851 18.7843 13.8842C18.8366 13.9175 18.895 13.9401 18.9561 13.9508C19.0172 13.9615 19.0798 13.96 19.1404 13.9465C19.2009 13.933 19.2582 13.9077 19.309 13.872C19.3597 13.8363 19.4029 13.791 19.4362 13.7387C19.4694 13.6863 19.4921 13.6279 19.5027 13.5668C19.5134 13.5057 19.5119 13.4431 19.4984 13.3826C19.4849 13.322 19.4596 13.2648 19.424 13.214L17.91 11.06ZM14.952 12.984H13.492V9.297C13.4864 9.17571 13.4342 9.06123 13.3464 8.97737C13.2586 8.89351 13.1419 8.84672 13.0205 8.84672C12.899 8.84672 12.7823 8.89351 12.6945 8.97737C12.6067 9.06123 12.5545 9.17571 12.549 9.297V13.456C12.549 13.716 12.759 13.928 13.02 13.928H14.952C15.0771 13.928 15.1972 13.8783 15.2857 13.7898C15.3742 13.7012 15.424 13.5812 15.424 13.456C15.424 13.3308 15.3742 13.2108 15.2857 13.1222C15.1972 13.0337 15.0771 12.984 14.952 12.984ZM9.09495 11.893L9.79095 10.185L10.429 11.892L9.09495 11.893ZM11.618 12.38L11.62 12.364C11.6196 12.2451 11.5742 12.1308 11.493 12.044L10.447 9.244C10.4031 9.11057 10.3196 8.99369 10.2075 8.90899C10.0955 8.8243 9.96028 8.7758 9.81995 8.77C9.67872 8.76994 9.54077 8.81259 9.42423 8.89237C9.30768 8.97215 9.218 9.08531 9.16695 9.217L7.50495 13.292C7.45761 13.4079 7.45825 13.5379 7.50673 13.6533C7.55521 13.7687 7.64755 13.8602 7.76345 13.9075C7.87935 13.9548 8.00931 13.9542 8.12474 13.9057C8.24017 13.8572 8.33161 13.7649 8.37895 13.649L8.71095 12.836H10.781L11.079 13.636C11.0993 13.6958 11.1314 13.7509 11.1734 13.7981C11.2154 13.8452 11.2665 13.8835 11.3236 13.9105C11.3806 13.9376 11.4425 13.9529 11.5056 13.9557C11.5687 13.9584 11.6317 13.9484 11.6909 13.9263C11.7501 13.9042 11.8042 13.8704 11.8501 13.8271C11.896 13.7837 11.9327 13.7315 11.9581 13.6737C11.9835 13.6158 11.997 13.5535 11.9978 13.4903C11.9986 13.4272 11.9868 13.3645 11.963 13.306L11.618 12.38ZM8.29495 9.302C8.29522 9.24003 8.28322 9.17861 8.25966 9.12129C8.23609 9.06397 8.20143 9.01188 8.15765 8.96801C8.11387 8.92414 8.06185 8.88936 8.00458 8.86568C7.94732 8.84199 7.88593 8.82987 7.82395 8.83H4.57895C4.45377 8.83 4.33372 8.87973 4.2452 8.96825C4.15668 9.05676 4.10695 9.17682 4.10695 9.302C4.10695 9.42718 4.15668 9.54724 4.2452 9.63575C4.33372 9.72427 4.45377 9.774 4.57895 9.774H5.73895V13.51C5.73895 13.6352 5.78868 13.7552 5.8772 13.8438C5.96572 13.9323 6.08577 13.982 6.21095 13.982C6.33614 13.982 6.45619 13.9323 6.54471 13.8438C6.63322 13.7552 6.68295 13.6352 6.68295 13.51V9.774H7.82295C7.88501 9.77426 7.94651 9.76224 8.00389 9.73861C8.06128 9.71498 8.11342 9.68023 8.1573 9.63634C8.20118 9.59246 8.23594 9.54032 8.25956 9.48294C8.28319 9.42555 8.29522 9.36406 8.29495 9.302Z" fill=" #446DF7"/>
+                </svg>
+                </a>
               </div>
             </div>
           </div>
-          <form class="contact-form" id="contactForm" data-aos="fade-left" data-aos-delay="150">
-            <div class="form-group">
-              <input type="text" id="name" placeholder="이름" required />
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" placeholder="이메일" required />
-            </div>
-            <div class="form-group">
-              <textarea id="message" rows="5" placeholder="메세지를 입력해주세요" required></textarea>
-            </div>
-            <button type="submit" class="btn-send">메시지 보내기</button>
-          </form>
         </div>
       </div>
     </section>
@@ -342,15 +382,15 @@
   </main>
 
   <!-- ===== FOOTER ===== -->
-  <footer id="footer">
+  <footer id="footer" data-aos="fade-in" data-aos-duration="1200" data-aos-offset="0">
     <div class="container">
       <div class="footer-inner">
         <p class="footer-logo">D-Lab</p>
         <p class="footer-copy">&copy; 이것은 상업용 목적이 아닌 개인 포트폴리오 사이트입니다.</p>
         <nav class="footer-links">
-          <a href="https://www.instagram.com/express_hold/">INSTAGRAM</a>
-          <a href="https://open.kakao.com/o/sbmcWnFb">KAKAOTALK</a>
-          <a href="https://github.com/kwh3017-create">GITHUB</a>
+          <a href="https://www.instagram.com/express_hold/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+          <a href="https://open.kakao.com/o/sbmcWnFb" target="_blank" rel="noopener noreferrer">KAKAOTALK</a>
+          <a href="https://github.com/kwh3017-create" target="_blank" rel="noopener noreferrer">GITHUB</a>
         </nav>
       </div>
     </div>
@@ -368,6 +408,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- Custom JS -->
   <script src="assets/js/main.js"></script>
 </body>
