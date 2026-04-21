@@ -179,8 +179,10 @@ $(function () {
     AOS.refresh();
   });
 
+  // 리사이즈 시 Swiper 업데이트 및 AOS 갱신
   $(window).on('resize', function() {
     if (projectSwiper) projectSwiper.update();
+    AOS.refresh();
   });
 
 }); // end $(function)
