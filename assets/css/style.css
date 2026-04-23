@@ -518,6 +518,8 @@ section {
   border-radius: var(--radius);
   padding: 28px 24px;
   transition: border-color var(--trans);
+  position: relative;
+  overflow: hidden;
 }
 .skill-card:hover { border-color: var(--accent); }
 .skill-card__icon {
@@ -537,6 +539,53 @@ section {
   font-size: 18px;
   color: var(--text-mute);
   line-height: 1.7;
+}
+
+/* Skill card hover overlay */
+.skill-card__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(0,0,0,.72);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity .3s ease;
+  border-radius: var(--radius);
+}
+.skill-card:hover .skill-card__overlay { opacity: 1; }
+
+.skill-ring {
+  width: 90px;
+  height: 90px;
+}
+.skill-ring__bg {
+  fill: none;
+  stroke: rgba(255,255,255,.15);
+  stroke-width: 6;
+}
+.skill-ring__fill {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 213.6;
+  stroke-dashoffset: 213.6;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset .8s cubic-bezier(.4,0,.2,1);
+}
+.skill-card:hover .skill-ring__fill {
+  stroke-dashoffset: var(--dash-offset, 213.6);
+}
+.skill-ring__pct {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: .05em;
 }
 
 /* Skill Bars */
@@ -595,8 +644,8 @@ section {
 
 .project-item {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
   align-items: center;
   width: 100%;
 }
@@ -649,10 +698,10 @@ section {
 .project-item__img {
   position: relative;
   width: 100%;
-  height: 320px;
+  height: 380px;
   overflow: hidden;
   border-radius: var(--radius);
-  background: var(--surface);
+  background: transparent;
 }
 .project-item__thumb {
   position: absolute;
@@ -705,6 +754,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  text-align: right;
 }
 .project-num {
   font-size: 16px;
@@ -734,6 +784,7 @@ section {
 }
 .project-meta li {
   display: flex;
+  justify-content: space-between;
   gap: 20px;
   font-size: 18px;
 }
@@ -751,7 +802,8 @@ section {
   letter-spacing: .06em;
   color: var(--text-mute);
   transition: color var(--trans);
-  align-self: flex-start;
+  align-self: flex-end;
+  margin-top: auto;
 }
 .project-more:hover { color: var(--accent); }
 

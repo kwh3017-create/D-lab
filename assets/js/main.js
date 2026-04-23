@@ -23,6 +23,17 @@ $(function () {
 
 
   /* ──────────────────────────────────────────
+     SKILL RING — 호버 시 원형 그래프 오프셋 설정
+  ────────────────────────────────────────── */
+  const CIRCUMFERENCE = 2 * Math.PI * 34; // r=34 → ≈213.6
+  document.querySelectorAll('.skill-card[data-level]').forEach(card => {
+    const level = parseInt(card.dataset.level, 10);
+    const offset = CIRCUMFERENCE * (1 - level / 100);
+    card.style.setProperty('--dash-offset', offset);
+  });
+
+
+  /* ──────────────────────────────────────────
      3. HERO PARALLAX (GSAP)
   ────────────────────────────────────────── */
   // hero circles 미세 parallax (생동감 부여)
@@ -178,6 +189,11 @@ $(function () {
   // 리사이즈 시 Swiper 업데이트 및 AOS 갱신
   $(window).on('resize', function() {
     if (projectSwiper) projectSwiper.update();
+    AOS.refresh();
+  });
+
+  // 모든 리소스 로드 완료 후 AOS 위치 재계산
+  $(window).on('load', function() {
     AOS.refresh();
   });
 
